@@ -8,7 +8,7 @@ const AddProductForm = ({ onAddProduct }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (name && price && stock) {
-            onAddProduct({id:Date.now(), name, price, stock: parseInt(stock) });
+            onAddProduct({id:Date.now(), name, price: parseFloat(price), stock: parseInt(stock) });
             setName('');
             setPrice('');
             setStock('');
